@@ -34,6 +34,8 @@
         <div class="row">
             <button type="button" class="btn btn-default new">Create New Blog Post</button>
         </div>
+        <div class="posts row">
+        </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -50,24 +52,26 @@
             <div class="modal fade" id="edit-<%= item.id %>">
             <div class="modal-dialog">
               <div class="modal-content">
+                <form class="edit" data-id="<%= item.id %>">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                   <h4 class="modal-title">Modal title</h4>
                 </div>
                 <div class="modal-body">
-                  <div class="row">
-                    <label for="title">Blog Title:</label>
-                    <input type="text" name="title" value="<%= item.title %>" class="form-control" />
-                  </div>
-                  <div class="row">
-                    <label for="content">Blog Content:</label>
-                    <textarea name="content" class="form-control"><%= item.text %></textarea>
-                  </div>
+                    <div class="row">
+                      <label for="title">Blog Title:</label>
+                      <input type="text" name="title" value="<%= item.title %>" class="form-control" />
+                    </div>
+                    <div class="row">
+                      <label for="text">Blog Content:</label>
+                      <textarea name="text" class="form-control"><%= item.text %></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-primary edit">Save changes</button>
                 </div>
+                </form>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->
