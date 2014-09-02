@@ -1,0 +1,13 @@
+{
+    "name": "simple-blog-backend",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "~3.5.1",
+        "consolidate": "*",
+        "hogan.js": "*"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
